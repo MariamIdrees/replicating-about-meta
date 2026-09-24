@@ -1,17 +1,36 @@
-import { Handbag, UserRound} from "lucide-react"
+import { Handbag, Menu, UserRound} from "lucide-react"
+import Sidebar from "./Sidebar"
+import {useState} from "react"
+import{Link} from "react-router-dom"
+
 
 const Header = () => {
+  const [toggle, setToggle] = useState(false)
+  const toggleSwitch = () => {
+    setToggle(!toggle)
+  }
   return (
-    <header className="flex h-20 px-48 max-md:px-16 justify-between items-center font-medium">
+    <header className=" bg-amber-400 fixed top-0 w-full z-50 flex h-20 px-48 max-md:px-16 justify-between items-center font-medium">
      <section className="h-screen flex gap-12 items-center">
+        <Link to="/">
+        {""}
         <div className="cursor-pointer">
             <img className="w-20" src="metaicon.svg" alt="meta logo" />
         </div>
+        </Link>
         <section className=" flex gap-8 max-md:hidden">
+         <Link to = "/about">
             <nav className="cursor-pointer">About</nav>
-            <nav className="cursor-pointer"> AI glasses</nav>
+         </Link>
+            <Link to = "/ai glasses">
+             <nav className="cursor-pointer"> AI glasses</nav>
+            </Link>
+           <Link to="/meta quest">
             <nav className="cursor-pointer">Meta Quest</nav>
-            <nav className="cursor-pointer">Apps and Games</nav>
+           </Link>
+            <Link to="/apps and games">
+             <nav className="cursor-pointer">Apps and Games</nav>
+            </Link>
         </section>
 
         <section className="flex gap-8 max-md:hidden">
@@ -26,6 +45,10 @@ const Header = () => {
               </div>
             </main>
         </section>
+
+           <section onClick={toggleSwitch} className="hidden max-md:block cursor-pointer">
+            <Menu />
+           </section>
 
 
 
