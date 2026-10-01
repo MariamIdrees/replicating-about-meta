@@ -1,11 +1,12 @@
-
+import AboutHero from '../components/ui/AboutHero';
 
 const About = () => {
   return (
     <div>
-        <h1>This is the about page</h1>
+  <AboutHero/>
     </div>
   )
 }
 
 export default About
+
