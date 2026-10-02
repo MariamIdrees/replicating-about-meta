@@ -10,11 +10,11 @@ const Header = () => {
     setToggle(!toggle)
   }
   return (
-    <header className=" bg-amber-400 fixed top-0 w-full z-50 flex h-20 px-48 max-md:px-16 justify-between items-center font-medium">
-     <section className="h-screen flex gap-12 items-center">
+    <header className=" bg-amber-400 fixed top-0 w-full z-50 flex h-20 px-26 max-md:px-16 justify-between items-center font-medium">
+     <section className="h-screen flex w-full gap-12 items-center">
         <Link to="/">
         {""}
-        <div className="cursor-pointer">
+        <div className="cursor-pointer bg-red-500 ">
             <img className="w-20" src="metaicon.svg" alt="meta logo" />
         </div>
         </Link>
@@ -36,7 +36,7 @@ const Header = () => {
         <section className="flex gap-8 max-md:hidden">
             <nav className="cursor-pointer">Explore Meta</nav>
             <nav className="cursor-pointer">Support</nav>
-            <main className="flex gap-6 items-center">
+            <main className="flex gap-6  items-center bg-lime-500 ">
               <div className="cursor-pointer">
                     <Handbag />
               </div>
