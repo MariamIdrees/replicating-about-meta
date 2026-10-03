@@ -22,11 +22,31 @@ const AboutHero = () => {
                    Our Mission
             </button>
                </div>
+                     
+                    <video className="absolute top-0 left-0 w-full h-full object-cover" autoPlay loop src={video2} type="video/mp4"></video>
+                 </div> 
 
-               <video className="absolute top-0 left-0 w-full h-full object-cover" autoPlay loop src={video2} type="video/mp4">
+                <div className="section">
+                 <div className="bg-pink-800 h-screen">
+                    <div className="flex justify-center items-center flex-col  h-full w-full">
+                           <h1>And the technologies that makes it possible</h1>
+                           <button className="px-5 py-3 bg-blue-500 rounded-full text-white">
+                            Our Technologies
+                           </button>
 
-               </video>   
-              </div> 
+                    </div>
+
+                    <video className="absolute top-0 left-0 w-full h-full object-cover" autoPlay loop src={video3} type="video/mp4">
+
+               </video> 
+
+
+                 </div>
+                    
+                    
+                </div>  
+
+            
            </div>
 
 
